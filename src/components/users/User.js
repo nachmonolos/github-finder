@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import { Link } from "react-router-dom";
-import Spinner from "../layout/Spinner";
+import ProgressBar from "../layout/ProgressBar";
 import Repos from "../repos/Repos";
 import PropTypes from "prop-types";
 
@@ -37,12 +37,12 @@ export class User extends Component {
 
     const { loading, repos } = this.props;
     if (loading) {
-      return <Spinner />;
+      return <ProgressBar />;
     }
 
     return (
       <Fragment>
-        <Link to='/' className='btn btn-light'>
+        <Link to='/' className='btn btn-light' style={{marginRight:'1rem'}}>
           Back To Search
         </Link>
         Hireable: {` `}
@@ -59,7 +59,7 @@ export class User extends Component {
               alt=''
               style={{ width: "150px" }}
             />
-            <h1>{name}</h1>
+            <h3>{name}</h3>
             <p>Location: {location}</p>
           </div>
           <div>

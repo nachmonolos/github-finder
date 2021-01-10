@@ -1,11 +1,11 @@
 import React from "react";
 import UserItem from "./UserItem";
-import Spinner from "../layout/Spinner";
 import PropTypes from "prop-types";
+import ProgressBar from "../layout/ProgressBar";
 
 const Users = ({ users, loading }) => {
   if (loading) {
-    return <Spinner />;
+    return <ProgressBar />;
   } else {
     return (
       <div style={userStyle}>

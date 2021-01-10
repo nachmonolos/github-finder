@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ icon, title }) => {
   return (
-    <nav className='navbar bg-primary'>
-      <h1>
-        <i className={icon}></i> {title}
-      </h1>
-      <ul>
+    <nav style={{marginBottom:'1rem'}}className='nav-wrapper'>
+      <div className="brand-logo center">
+        <i  style={{lineHeight:'inherit'}}className={icon}></i> {title}
+      </div>
+      <ul className='right'>
         <li>
           <Link to='/'>Home</Link>
         </li>
