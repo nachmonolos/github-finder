@@ -23,6 +23,11 @@ body {
   color: #333;
 }
 
+strong {
+font-weight: 700;
+}
+
+
 a {
   color: var(--primary-color);
   text-decoration: none;

@@ -59,13 +59,13 @@ export class User extends Component {
               alt=''
               style={{ width: "150px" }}
             />
-            <h3>{name}</h3>
+            <h4>{name}</h4>
             <p>Location: {location}</p>
           </div>
           <div>
             {bio && (
               <Fragment>
-                <h3>Bio</h3>
+                <h4>Bio</h4>
                 <p>{bio}</p>
               </Fragment>
             )}
