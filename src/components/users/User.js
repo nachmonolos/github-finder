@@ -42,25 +42,25 @@ export class User extends Component {
 
     return (
       <Fragment>
-        <Link to='/' className='btn btn-light' style={{marginRight:'1rem'}}>
+        <Link to="/" className="btn btn-light" style={{ marginRight: "1rem" }}>
           Back To Search
         </Link>
         Hireable: {` `}
         {hireable ? (
-          <i className='fas fa-check text-success' />
+          <i className="fas fa-check text-success" />
         ) : (
-          <i className='fas fa-times-circle text-danger' />
+          <i className="fas fa-times-circle text-danger" />
         )}
-        <div className='card grid-2'>
-          <div className='all-center'>
+        <div className="card grid-2">
+          <div className="all-center">
             <img
               src={avatar_url}
-              className='round-img'
-              alt=''
+              className="round-img"
+              alt=""
               style={{ width: "150px" }}
             />
             <h4>{name}</h4>
-            <p>Location: {location}</p>
+            {location && <p>Location: {location}</p>}
           </div>
           <div>
             {bio && (
@@ -69,7 +69,7 @@ export class User extends Component {
                 <p>{bio}</p>
               </Fragment>
             )}
-            <a href={html_url} className='btn btn-dark my-1'>
+            <a href={html_url} className="btn btn-dark my-1">
               Visit Github Profile
             </a>
             <ul>
@@ -97,11 +97,11 @@ export class User extends Component {
             </ul>
           </div>
         </div>
-        <div className='card text-center'>
-          <div className='badge badge-primary'>Followers: {followers}</div>
-          <div className='badge badge-success'>Following: {following}</div>
-          <div className='badge badge-light'>Public Repos: {public_repos}</div>
-          <div className='badge badge-dark'>Public Gists: {public_gists}</div>
+        <div className="card text-center">
+          <div className="badge badge-primary">Followers: {followers}</div>
+          <div className="badge badge-success">Following: {following}</div>
+          <div className="badge badge-light">Public Repos: {public_repos}</div>
+          <div className="badge badge-dark">Public Gists: {public_gists}</div>
         </div>
         <Repos repos={repos} />
       </Fragment>
