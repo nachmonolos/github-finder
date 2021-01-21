@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Search extends Component {
   state = {
-    text: "",
+    text: '',
   };
 
   static propTypes = {
@@ -15,11 +15,11 @@ class Search extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    if (this.state.text === "") {
-      this.props.setAlert("Please Enter Something", "light");
+    if (this.state.text === '') {
+      this.props.setAlert('Please Enter Something', 'light');
     } else {
       this.props.searchUsers(this.state.text);
-      this.setState({ text: "" });
+      this.setState({ text: '' });
     }
   };
 
@@ -27,23 +27,23 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit} className="form">
+        <form onSubmit={this.onSubmit} className='form'>
           <input
-            type="text"
-            name="text"
-            placeholder="Search Users..."
+            type='text'
+            name='text'
+            placeholder='Search Users...'
             onChange={this.onChange}
             value={this.state.text}
           />
           <input
-            type="submit"
-            value="Search"
-            className="btn btn-dark btn-block"
+            type='submit'
+            value='Search'
+            className='btn btn-dark btn-block'
           />
         </form>
         {this.props.showClear && (
           <button
-            className="btn btn-light btn-block"
+            className='btn btn-light btn-block'
             onClick={this.props.clearUsers}
           >
             Clear
