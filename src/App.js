@@ -76,7 +76,7 @@ class App extends React.Component {
             <Switch>
               <Route
                 exact
-                path='/'
+                path='/github-finder'
                 render={props => (
                   <Fragment>
                     <Search

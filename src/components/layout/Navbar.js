@@ -10,7 +10,7 @@ const Navbar = ({ icon, title }) => {
       </div>
       <ul className='right'>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to='/github-finder'>Home</Link>
         </li>
         <li>
           <Link to='/about'>About</Link>
